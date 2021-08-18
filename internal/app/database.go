@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"go.haiyiyun.org/mongodb"
-	"go.haiyiyun.org/mongodb/driver"
-	"go.haiyiyun.org/utils/help"
+	"github.com/haiyiyun/mongodb"
+	"github.com/haiyiyun/mongodb/driver"
+	"github.com/haiyiyun/utils/help"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

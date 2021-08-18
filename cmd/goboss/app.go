@@ -7,14 +7,14 @@ import (
 	"path"
 	"runtime"
 
-	"go.haiyiyun.org/config"
-	"go.haiyiyun.org/log"
-	_ "go.haiyiyun.org/plugins/cors"
-	_ "go.haiyiyun.org/plugins/gzip"
-	_ "go.haiyiyun.org/plugins/log"
-	_ "go.haiyiyun.org/plugins/upload"
-	_ "go.haiyiyun.org/plugins/urbac"
-	"go.haiyiyun.org/webrouter"
+	"github.com/haiyiyun/config"
+	"github.com/haiyiyun/log"
+	_ "github.com/haiyiyun/plugins/cors"
+	_ "github.com/haiyiyun/plugins/gzip"
+	_ "github.com/haiyiyun/plugins/log"
+	_ "github.com/haiyiyun/plugins/upload"
+	_ "github.com/haiyiyun/plugins/urbac"
+	"github.com/haiyiyun/webrouter"
 )
 
 func main() {

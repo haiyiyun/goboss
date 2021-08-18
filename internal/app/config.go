@@ -1,6 +1,6 @@
 package app
 
-import "go.haiyiyun.org/config"
+import "github.com/haiyiyun/config"
 
 type Config struct {
 	MaxProcs               int             `json:"max_procs"`
