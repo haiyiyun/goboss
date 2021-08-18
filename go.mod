@@ -1,3 +1,3 @@
-module go.haiyiyun.org/webrouter
+module goboss
 
 go 1.16
