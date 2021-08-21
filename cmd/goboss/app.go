@@ -2,18 +2,20 @@ package main
 
 import (
 	"flag"
-	"goboss/internal/app"
 	"os"
 	"path"
 	"runtime"
+
+	"goboss/internal/app"
+	_ "goboss/internal/app/app1"
 
 	"github.com/haiyiyun/config"
 	"github.com/haiyiyun/log"
 	_ "github.com/haiyiyun/plugins/cors"
 	_ "github.com/haiyiyun/plugins/gzip"
-	_ "github.com/haiyiyun/plugins/log"
-	_ "github.com/haiyiyun/plugins/upload"
-	_ "github.com/haiyiyun/plugins/urbac"
+	_ "github.com/haiyiyun/plugins/log/init/manage"
+	_ "github.com/haiyiyun/plugins/upload/init/manage"
+	_ "github.com/haiyiyun/plugins/urbac/init/manage"
 	"github.com/haiyiyun/webrouter"
 )
 
