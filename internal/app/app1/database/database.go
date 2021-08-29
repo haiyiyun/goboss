@@ -11,9 +11,9 @@ type Database struct {
 }
 
 func NewDatabase(mgo mongodb.Mongoer, col bson.M) *Database {
-	mdl := &Database{
+	db := &Database{
 		Database: database.NewDatabase(mgo, col),
 	}
 
-	return mdl
+	return db
 }
