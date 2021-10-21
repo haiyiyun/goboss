@@ -12,6 +12,7 @@
 run/
 log/*.log
 test/
+bin/
 
 # IntelliJ related
 *.iml
