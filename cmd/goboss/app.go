@@ -21,6 +21,7 @@ import (
 
 func main() {
 	appConfFile := flag.String("config.app", "../config/goboss/app.conf", "app config file")
+	flag.Parse()
 	appConf := app.Config{}
 	config.Files(*appConfFile).Load(&appConf)
 
