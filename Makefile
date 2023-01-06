@@ -1,11 +1,17 @@
 PWD=`pwd`
 BIN=$(PWD)/bin
+MODE=""
 GO_DEBUG=",debug"
 GO_PORT_GOBOSS="8080"
 
 #==========================================
 install_goboss:
+ifeq ($(MODE), "debug")
 	GOBIN=$(BIN) go install ./cmd/goboss/...
+else
+	GOBIN=$(BIN) go install -ldflags '-s -w' -gcflags="all=-trimpath=$(PWD)" -asmflags="all=-trimpath=$(PWD)" ./cmd/goboss/...
+	cd $(BIN) && upx -9 goboss
+endif
 
 run_goboss:
 ifeq (bin/pid.goboss, $(wildcard bin/pid.goboss))
@@ -60,4 +66,8 @@ reinstall:
 	make runall
 #==========================================
 clean:
+ifeq (bin/pid.goboss, $(wildcard bin/pid.goboss))
+	@echo 'Process exists PID: ' && cat bin/pid.goboss
+else
 	rm -rf $(BIN)/
+endif

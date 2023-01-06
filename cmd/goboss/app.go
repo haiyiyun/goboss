@@ -46,7 +46,7 @@ func main() {
 	webrouter.SetBeforeMethodName("Init")
 	webrouter.SetBeforeMethodName("Before")
 	if log.LEVEL_DEBUG&log.Levels() == 0 {
-		log.SetFlags(log.LProduction)
+		log.SetFlags(log.Lproduction)
 	}
 
 	defer webrouter.Close()
