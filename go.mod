@@ -7,11 +7,11 @@ require (
 	github.com/haiyiyun/config v0.0.0-20211115100328-3a3b03ce7d35
 	github.com/haiyiyun/log v0.0.0-20220125040429-3699970552a6
 	github.com/haiyiyun/mongodb v0.0.0-20220108162216-33ee0dca6d1c
-	github.com/haiyiyun/plugins/cors v0.0.0-20230120010252-fc088f6f3dbb
-	github.com/haiyiyun/plugins/gzip v0.0.0-20230120010252-fc088f6f3dbb
-	github.com/haiyiyun/plugins/log v0.0.0-20230120010252-fc088f6f3dbb
-	github.com/haiyiyun/plugins/upload v0.0.0-20230120010252-fc088f6f3dbb
-	github.com/haiyiyun/plugins/urbac v0.0.0-20230120010252-fc088f6f3dbb
+	github.com/haiyiyun/plugins/cors v0.0.0-20230120122813-2f699304561d
+	github.com/haiyiyun/plugins/gzip v0.0.0-20230120122813-2f699304561d
+	github.com/haiyiyun/plugins/log v0.0.0-20230120122813-2f699304561d
+	github.com/haiyiyun/plugins/upload v0.0.0-20230120122813-2f699304561d
+	github.com/haiyiyun/plugins/urbac v0.0.0-20230120122813-2f699304561d
 	github.com/haiyiyun/webrouter v0.0.0-20211125101311-e49551c30619
 	go.mongodb.org/mongo-driver v1.11.1
 )
