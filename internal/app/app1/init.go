@@ -3,6 +3,7 @@ package app1
 import (
 	"context"
 	"flag"
+	"os"
 
 	"goboss/internal/app/app1/database/schema"
 	"goboss/internal/app/app1/service"
@@ -19,6 +20,9 @@ func init() {
 	app1ConfFile := flag.String("config.app1", "../config/app1/app1.conf", "app1 config file")
 	var app1Conf service.Config
 	config.Files(*app1ConfFile).Load(&app1Conf)
+
+	os.Setenv("HYY_CACHE_TYPE", app1Conf.CacheType)
+	os.Setenv("HYY_CACHE_URL", app1Conf.CacheUrl)
 
 	app1Cache := cache.New(app1Conf.CacheDefaultExpiration.Duration, app1Conf.CacheCleanupInterval.Duration)
 	app1DB := mongodb.NewMongoPool("", app1Conf.MongoDatabaseName, 100, options.Client().ApplyURI(app1Conf.MongoDNS))
