@@ -23,6 +23,8 @@ func init() {
 
 	os.Setenv("HYY_CACHE_TYPE", app1Conf.CacheType)
 	os.Setenv("HYY_CACHE_URL", app1Conf.CacheUrl)
+	os.Setenv("HYY_SHARD_COUNT", app1Conf.CacheShardCount)
+	os.Setenv("HYY_STRICT_TYPE_CHECK", app1Conf.CacheUStrictTypeCheck)
 
 	app1Cache := cache.New(app1Conf.CacheDefaultExpiration.Duration, app1Conf.CacheCleanupInterval.Duration)
 	app1DB := mongodb.NewMongoPool("", app1Conf.MongoDatabaseName, 100, options.Client().ApplyURI(app1Conf.MongoDNS))
